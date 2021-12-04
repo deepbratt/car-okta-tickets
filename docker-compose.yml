@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  tickets:
+    build: './'
+    ports:
+      - '3001:3001'
+    networks:
+      - ms_network
+networks:
+  ms_network:
+    driver: bridge
+    name: ms_network

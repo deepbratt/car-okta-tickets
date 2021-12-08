@@ -3,9 +3,14 @@ services:
   tickets:
     build: './'
     ports:
-      - '3001:3001'
+      - '3002:3002'
     networks:
       - ms_network
+    deploy:
+        resources:
+            limits:
+              cpus: 0.25
+              memory: 500M
 networks:
   ms_network:
     driver: bridge
